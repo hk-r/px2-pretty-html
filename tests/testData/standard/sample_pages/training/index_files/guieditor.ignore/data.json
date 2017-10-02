@@ -14,6 +14,22 @@
       },
       "anchor": "",
       "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/HTML",
+      "fields": {
+       "main": "<textarea>\n    aaaa\n        bbbbb\n            ccccc\n                ddddd\n</textarea>\n\n<pre>\n                aaaaa\n            bbbbb\n        ccccc\n    ddddd\n</pre>"
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/HTML",
+      "fields": {
+       "main": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>aaaaaa</p>"
+      },
+      "anchor": "",
+      "dec": ""
      }
     ]
    }
