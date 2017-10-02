@@ -15,11 +15,13 @@
         ]
     } ,
     "repositories": [
+        {
+            "type":"vcs",
+            "url": "https://github.com/hk-r/dindent.git"            
+        }
     ],
     "require": {
-        "php": ">=5.4.0" ,
-        "gajus/dindent": "2.0.2"
-
+        "php": ">=5.4.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.1.0",
@@ -31,7 +33,8 @@
         "pickles2/px2-path-resolver": "dev-develop",
         "pickles2/px2-px2dthelper": "dev-develop",
         "pickles2/px2-remove-attr": "dev-develop",
-        "pickles2/px2-sitemapexcel": "dev-develop"
+        "pickles2/px2-sitemapexcel": "dev-develop",
+        "hk-r/dindent": "dev-develop"
     },
     "autoload": {
         "files": [
