@@ -36,14 +36,31 @@ $ composer update
 
 設定ファイル `config.php` (通常は `./px-files/config.php`) を編集します。
 
-- OGP自動生成の処理追加  
+- htmlインデント整形の処理追加  
 `$conf->funcs->processor->html` に、処理 `'hk\pickles2\prettyHtml\prettyHtml::exec'` を追加します。
 
 ```php
 	$conf->funcs->processor->html = array(
 		// htmlのインデントを整える
-		'hk\pickles2\prettyHtml\prettyHtml::exec' ,
+		'hk\pickles2\prettyHtml\prettyHtml::exec('.json_encode(array(
+			// インデントに使用する文字を指定
+			'indentation_character'=>"\t"
+		)).')' ,
 	);
+```
+
+- オプション  
+・indentation_character - インデントに使用する文字を指定します。  
+ オプションを指定しない場合はデフォルト(半角スペース2つ)がインデントとして挿入されます。  
+ 例) タブ  
+```php
+	// タブがインデントとして挿入されます。
+	'indentation_character'=>"\t"
+```
+ 例) 半角スペース4つ  
+```php
+	// 半角スペース4つがインデントとして挿入されます。
+	'indentation_character'=>"    "
 ```
 
 ## 更新履歴 - Change log

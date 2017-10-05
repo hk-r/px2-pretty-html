@@ -5,7 +5,6 @@
  */
 namespace hk\pickles2\prettyHtml;
 
-// require 'vendor/autoload.php';
 use \Gajus\Dindent\Indenter;
 
 /**
@@ -19,10 +18,21 @@ class prettyHtml{
      */
     public static function exec( $px, $json ){
 
+        $arg_array = array();
+        $param_array = array();
+
         foreach( $px->bowl()->get_keys() as $key ){
             $src = $px->bowl()->pull( $key );
 
-            $indenter = new Indenter();
+            if ( $arg_array = (array)$json ) {
+                if ( array_key_exists('indentation_character', $arg_array) ) {
+                    $param_array['indentation_character'] = $arg_array['indentation_character'];
+                } else {
+                    $param_array['indentation_character'] = '  '; // 半角スペース2つ
+                }
+            }
+
+            $indenter = new Indenter( $param_array );
             $after = $indenter->indent( $src );
 
             $px->bowl()->replace( $after, $key );

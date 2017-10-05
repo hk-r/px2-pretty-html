@@ -229,7 +229,9 @@ return call_user_func( function(){
 		]).')' ,
 
 		// htmlのインデントを整える
-		'hk\pickles2\prettyHtml\prettyHtml::exec' ,
+		'hk\pickles2\prettyHtml\prettyHtml::exec('.json_encode(array(
+			'indentation_character'=>"\t"
+		)).')' ,
 
 		// Apache互換のSSIの記述を解決する
 		'picklesFramework2\processors\ssi\ssi::exec' ,
