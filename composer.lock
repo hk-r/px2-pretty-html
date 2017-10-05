@@ -4,9 +4,58 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c47c89084865738a275885c7a0d3e19a",
-    "content-hash": "d491f60437fc20dae6008d82c3b6cf59",
-    "packages": [],
+    "hash": "2c17771a58f47d71f0744bd3f3fe4a66",
+    "content-hash": "5bbbb277fb9c806ad46eb160292cd8d2",
+    "packages": [
+        {
+            "name": "hk-r/dindent",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hk-r/dindent.git",
+                "reference": "3e5866f76c74ebfd801df41e6741aaf315d3a7d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hk-r/dindent/zipball/3e5866f76c74ebfd801df41e6741aaf315d3a7d8",
+                "reference": "3e5866f76c74ebfd801df41e6741aaf315d3a7d8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Gajus\\Dindent\\": "src/"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Gajus Kuizinas",
+                    "email": "gk@anuary.com"
+                }
+            ],
+            "description": "HTML indentation library for development and testing.",
+            "homepage": "https://github.com/gajus/dindent",
+            "keywords": [
+                "HTML",
+                "format",
+                "indent"
+            ],
+            "support": {
+                "source": "https://github.com/hk-r/dindent/tree/develop"
+            },
+            "time": "2017-10-02 01:46:22"
+        }
+    ],
     "packages-dev": [
         {
             "name": "broccoli-html-editor/broccoli-module-fess",
@@ -142,54 +191,6 @@
                 "instantiate"
             ],
             "time": "2015-06-14 21:17:01"
-        },
-        {
-            "name": "hk-r/dindent",
-            "version": "dev-develop",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/hk-r/dindent.git",
-                "reference": "3e5866f76c74ebfd801df41e6741aaf315d3a7d8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/hk-r/dindent/zipball/3e5866f76c74ebfd801df41e6741aaf315d3a7d8",
-                "reference": "3e5866f76c74ebfd801df41e6741aaf315d3a7d8",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*",
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "satooshi/php-coveralls": "dev-master"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Gajus\\Dindent\\": "src/"
-                }
-            },
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Gajus Kuizinas",
-                    "email": "gk@anuary.com"
-                }
-            ],
-            "description": "HTML indentation library for development and testing.",
-            "homepage": "https://github.com/gajus/dindent",
-            "keywords": [
-                "HTML",
-                "format",
-                "indent"
-            ],
-            "support": {
-                "source": "https://github.com/hk-r/dindent/tree/develop"
-            },
-            "time": "2017-10-02 01:46:22"
         },
         {
             "name": "leafo/scssphp",
@@ -1919,6 +1920,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "hk-r/dindent": 20,
         "broccoli-html-editor/broccoli-module-fess": 20,
         "broccoli-html-editor/broccoli-module-plain-html-elements": 20,
         "pickles2/px-fw-2.x": 20,
@@ -1927,8 +1929,7 @@
         "pickles2/px2-path-resolver": 20,
         "pickles2/px2-px2dthelper": 20,
         "pickles2/px2-remove-attr": 20,
-        "pickles2/px2-sitemapexcel": 20,
-        "hk-r/dindent": 20
+        "pickles2/px2-sitemapexcel": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
