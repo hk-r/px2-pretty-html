@@ -20,6 +20,7 @@
             "url": "https://github.com/hk-r/dindent.git"            
         }
     ],
+    "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
         "hk-r/dindent": "dev-develop@dev"
