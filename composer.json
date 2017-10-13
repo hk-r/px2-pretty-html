@@ -23,7 +23,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
-        "hk-r/dindent": "dev-master@dev"
+        "hk-r/dindent": "dev-develop@dev"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.1.0",
