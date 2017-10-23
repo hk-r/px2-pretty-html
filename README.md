@@ -38,7 +38,6 @@ $ composer update
 
 - htmlインデント整形の処理追加  
 `$conf->funcs->processor->html` に、処理 `'hk\pickles2\prettyHtml\prettyHtml::exec'` を追加します。
-
 ```php
 	$conf->funcs->processor->html = array(
 		// htmlのインデントを整える
@@ -50,7 +49,7 @@ $ composer update
 ```
 
 - オプション  
-・indentation_character - インデントに使用する文字を指定します。  
+**indentation_character** - インデントに使用する文字を指定します。  
  オプションを指定しない場合はデフォルト(半角スペース2つ)がインデントとして挿入されます。  
  例) タブ  
 ```php
@@ -61,6 +60,22 @@ $ composer update
 ```php
 	// 半角スペース4つがインデントとして挿入されます。
 	'indentation_character'=>"    "
+```
+**exclusion_elements** - インデント対象外のエレメントを指定します。  
+ 例) textarea, pre  
+```php
+	// インデント対象外のエレメントを指定します。
+	'exclusion_elements'=>array(
+		'textarea', 'pre'
+	),
+```
+**inline_elements** - インラインとして扱うエレメントを指定します。  
+ 例) b, big, i, small, tt, abbr, acronym, cite, code, dfn, em, kbd, strong, samp, var, a, bdo, br, img, span, sub, sup
+```php
+	// インラインとして扱うエレメントを指定します。
+	'inline_elements'=>array(
+		'b', 'big', 'i', 'small', 'tt', 'abbr', 'acronym', 'cite', 'code', 'dfn', 'em', 'kbd', 'strong', 'samp', 'var', 'a', 'bdo', 'br', 'img', 'span', 'sub', 'sup'
+	),
 ```
 
 ## 更新履歴 - Change log
