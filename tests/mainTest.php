@@ -14,7 +14,7 @@ class mainTest extends PHPUnit_Framework_TestCase{
 	}
 
 	/**
-	 * OGP test
+	 * Pretty test
 	 */
 	public function testStandardPretty(){
 		//
@@ -25,7 +25,17 @@ class mainTest extends PHPUnit_Framework_TestCase{
 			'/sample_pages/training/index.html' ,// picklesのrootからのパス
 		] );
 
-		// $this->assertEquals( 1, preg_match('/'.preg_quote('<meta property="og:custome1" content="カスタム項目1" />','/').'/s', $output) );
+		// オプション指定してないエレメントの出力確認
+		$this->assertEquals( 1, preg_match('/'.preg_quote('<h2>ここはh2です</h2>','/').'/s', $output) );
+
+		// オプション(exclusion_elements)で指定したエレメントの出力確認
+		$this->assertEquals( 1, preg_match('/'.preg_quote('<h1>','/').'/s', $output) );
+		$this->assertEquals( 1, preg_match('/'.preg_quote('ここはh1です','/').'/s', $output) );
+		$this->assertEquals( 1, preg_match('/'.preg_quote('</h1>','/').'/s', $output) );
+
+		// オプション(inline_elements)で指定したエレメントの出力確認
+		$this->assertEquals( 1, preg_match('/'.preg_quote('supの確認（例：cm<sup>2</sup>）です。','/').'/s', $output) );
+		$this->assertEquals( 1, preg_match('/'.preg_quote('<li><span>編集してみょう</span></li>','/').'/s', $output) );
 		
 		$output = $this->passthru( [
 			'php',

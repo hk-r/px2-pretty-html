@@ -18,7 +18,7 @@
      {
       "modId": "PlainHTMLElements:PlainHTML/HTML",
       "fields": {
-       "main": "<textarea>\n    aaaa\n        bbbbb\n            ccccc\n                ddddd\n</textarea>\n\n<pre>\n                aaaaa\n            bbbbb\n        ccccc\n    ddddd\n</pre>"
+       "main": "<textarea>\n    1行目\n        2行目\n            3行目\n                4行目\n</textarea>\n\n<pre>\n                1行目\n            2行目\n        3行目\n    4行目\n</pre>"
       },
       "anchor": "",
       "dec": ""
@@ -26,7 +26,23 @@
      {
       "modId": "PlainHTMLElements:PlainHTML/HTML",
       "fields": {
-       "main": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>aaaaaa</p>"
+       "main": "<p>supの確認（例：cm<sup>2</sup>）です。<br>bbbbbb<br>cccccc<br>dddddd<br>eeeeee<br>ffffff</p>"
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/HTML",
+      "fields": {
+       "main": "<h1>\n    ここはh1です\n</h1>\n<h2>ここはh2です</h2>\n<h3>ここはh3です</h3>"
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/HTML",
+      "fields": {
+       "main": "<ul>\n    <li>リスト1</li>\n    <li>リスト2</li>\n    <li>リスト3</li>\n</ul>"
       },
       "anchor": "",
       "dec": ""
