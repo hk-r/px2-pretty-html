@@ -25,17 +25,23 @@ class mainTest extends PHPUnit_Framework_TestCase{
 			'/sample_pages/training/index.html' ,// picklesのrootからのパス
 		] );
 
+		$pre 	  = file_get_contents(__DIR__ . '/output/pre.html');
+		$textarea = file_get_contents(__DIR__ . '/output/textarea.html');
+		$sup 	  = file_get_contents(__DIR__ . '/output/sup.html');
+		$h1 	  = file_get_contents(__DIR__ . '/output/h1.html');
+		$li 	  = file_get_contents(__DIR__ . '/output/li.html');
+
+
 		// オプション指定してないエレメントの出力確認
-		$this->assertEquals( 1, preg_match('/'.preg_quote('<h2>ここはh2です</h2>','/').'/s', $output) );
+		$this->assertEquals( 1, preg_match('/'.preg_quote($h1,'/').'/s', $output) );
+		$this->assertEquals( 1, preg_match('/'.preg_quote($li,'/').'/s', $output) );
 
 		// オプション(exclusion_elements)で指定したエレメントの出力確認
-		$this->assertEquals( 1, preg_match('/'.preg_quote('<h1>','/').'/s', $output) );
-		$this->assertEquals( 1, preg_match('/'.preg_quote('ここはh1です','/').'/s', $output) );
-		$this->assertEquals( 1, preg_match('/'.preg_quote('</h1>','/').'/s', $output) );
+		$this->assertEquals( 1, preg_match('/'.preg_quote($pre,'/').'/s', $output) );
+		$this->assertEquals( 1, preg_match('/'.preg_quote($textarea,'/').'/s', $output) );
 
 		// オプション(inline_elements)で指定したエレメントの出力確認
-		$this->assertEquals( 1, preg_match('/'.preg_quote('supの確認（例：cm<sup>2</sup>）です。','/').'/s', $output) );
-		$this->assertEquals( 1, preg_match('/'.preg_quote('<li><span>編集してみょう</span></li>','/').'/s', $output) );
+		$this->assertEquals( 1, preg_match('/'.preg_quote($sup,'/').'/s', $output) );
 		
 		$output = $this->passthru( [
 			'php',

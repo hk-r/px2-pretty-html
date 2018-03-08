@@ -232,7 +232,7 @@ return call_user_func( function(){
 		'hk\pickles2\prettyHtml\prettyHtml::exec('.json_encode(array(
 			'indentation_character'=>"\t",
 			'exclusion_elements'=>array(
-				'textarea', 'pre', 'h1'
+				'textarea', 'pre'
 			),
 			'inline_elements'=>array(
 				'b', 'big', 'i', 'small', 'tt', 'abbr', 'acronym', 'cite', 'code', 'dfn', 'em', 'kbd', 'strong', 'samp', 'var', 'a', 'bdo', 'br', 'img', 'span', 'sub', 'sup'
