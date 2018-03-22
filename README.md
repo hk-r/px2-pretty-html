@@ -81,7 +81,7 @@ $ composer update
 
 ## 更新履歴 - Change log
 
-### hk-r/px2-pretty-html 1.0.0 (2018年xx月xx日)
+### hk-r/px2-pretty-html 1.0.0 (2018年3月22日)
 
 - Initial Release.
 
